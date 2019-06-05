@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="../style/style.css" rel="stylesheet">
+    <link href="../style/autocomplete.css" rel="stylesheet">
+    <link href="../style/panel.css" rel="stylesheet">
+    <link rel="icon" href="../img/favicon.ico">
+    <title>Foxcroft</title>
+</head>
+<body>
+    <div include-html="navigation.html"></div>
+
+    <script src="../script/shop.js"></script>
+
+    <div class="input-group mb-3">
+        <input id="search" name="search" type="text" class="form-control autocomplete" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1" oninput="inputEvent()">
+    </div>
+
+    <script>
+        initializeProducts(20);
+    </script>
+
+    <button type="button" class="btn filter btn-outline-secondary" data-toggle="modal" data-target="#exampleModal2">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+            
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-slideout" role="document">
+            <form id="filter-form" class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Filter Products</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                </div>
+                <div id="filter-body" name="filter-body" class="modal-body">
+                    <h3>Brand Name</h3>
+                    <script>
+                        createFilterElements();
+                    </script>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-outline-secondary">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        attachFormEvent();
+    </script>
+
+    <div id="special-offers" name="special-offers" class="container-fluid padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h1 class="display-5">Special Offers</h1>
+            </div>
+            <hr>
+        </div>
+        <div id="special-offer-container" name="special-offer-container" class="row padding">
+            <script>
+                createSpecialOfferElements();
+            </script>
+        </div>
+    </div>
+
+    <div id="popular" name="popular" class="container-fluid padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h1 class="display-5">Popular</h1>
+            </div>
+            <hr>
+        </div>
+        <div id="popular-container" name="popular-container" class="row padding">
+            <script>
+                createPopularElements();
+            </script>
+        </div>
+    </div>
+
+    <div id="products" name="products" class="container-fluid padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h1 id="products-header" name="products-header" class="display-5">All Products</h1>
+            </div>
+            <hr>
+        </div>
+        <div id="product-container" name="product-container" class="row padding">
+            <script>
+                createProductElements();
+            </script>
+        </div>
+    </div>
+
+    <div include-html="footer.html"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>	
+    <script src="../script/util.js"></script>
+</body>
+</html>
