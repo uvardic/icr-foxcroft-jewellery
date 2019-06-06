@@ -1,6 +1,6 @@
 window.onload = function() {
     includeHtml();
-}
+};
 
 function includeHtml() {
     const elements = document.getElementsByTagName("*");

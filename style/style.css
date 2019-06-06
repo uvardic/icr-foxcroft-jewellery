@@ -122,6 +122,10 @@ footer a {
   height: 100%;
 }
 
+.dropdown-item:focus {
+  background-color: #b4b4b4;
+}
+
 @media (max-width: 992px) {
   .social a {
     font-size: 4em;

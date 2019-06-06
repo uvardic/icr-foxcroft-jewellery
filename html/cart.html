@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link href="../style/style.css" rel="stylesheet">
-	<link href="../style/table.css" rel="stylesheet">
+	<link href="../style/cart.css" rel="stylesheet">
 	<link rel="icon" href="../img/favicon.ico">
 	<title>Foxcroft</title>
 </head>
@@ -14,11 +14,24 @@
 
 	<script src="../script/shop.js"></script>
 
+	<script>
+		initializeProducts(4);
+	</script>
+
 	<table id="cart-table">
+		<colgroup>
+			<col style="width: 30%">
+			<col style="width: 30%">
+			<col style="width: 15%">
+			<col style="width: 15%">
+			<col style="width: 5%">
+		</colgroup>
 		<thead>
 			<tr>
 				<th>Name</th>
+				<th>Brand</th>
 				<th>Price</th>
+				<th>Discount</th>
 				<th>Remove</th>
 			</tr>
 		</thead>
@@ -29,13 +42,37 @@
 		</tbody>
 	</table>
 
-	<div id="price-container" class="container-fluid padding" style="padding-top: 10px">
-		<h4 id="total-price"></h4>
-		<p id="shipping-p"></p>
+	<div id="price-container" class="container-fluid padding wrapper" style="padding-bottom: 0; padding-top: 5px">
+		<h4 class="total-price"></h4>
+		<p>Shipping cost is included</p>
 		<script>
 			showTotalPrice();
 		</script>
 	</div>
+
+	<form id="delivery-form" action="home.html">
+		<div class="container-fluid padding">
+			<div class="row padding">
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<h4>Delivery method</h4>
+					<input id="home-delivery" type="checkbox" name="home-delivery" value="home delivery"> Home delivery<br>
+					<input id="store-delivery" type="checkbox" name="store-delivery" value="store delivery"> Store delivery<br>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<h4>Payment method</h4>
+					<input id="on-delivery" type="checkbox" name="on-delivery" value="on delivery"> On delivery<br>
+					<input id="credit-card" type="checkbox" name="credit-card" value="credit card"> Credit card<br>
+				</div>
+			</div>
+			<input class="btn btn-outline-secondary" type="submit" name="submit" value="Proceed to delivery">
+		</div>
+	</form>
+
+	<script>
+		attachEventsToCheckboxes();
+	</script>
+
+	<div include-html="footer.html"></div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>

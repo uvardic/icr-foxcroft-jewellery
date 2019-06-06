@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="../style/style.css" rel="stylesheet">
+    <link href="../style/autocomplete.css" rel="stylesheet">
+    <link href="../style/panel.css" rel="stylesheet">
+    <link rel="icon" href="../img/favicon.ico">
+    <title>Foxcroft</title>
+</head>
+<body>
+    <div include-html="navigation.html"></div>
+
+    <div class="container-fluid padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h3>Login</h3>
+            </div>
+            <hr>
+        </div>
+        <form action="home.html">
+            <div class="form-group">
+                <label for="username-field">Username</label>
+                <input id="username-field" type="text" class="form-control" required placeholder="Username">
+            </div>
+            <div class="form-group">
+                <label for="password-field">Password</label>
+                <input id="password-field" type="password" class="form-control" required placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-outline-secondary">Login</button>
+        </form>
+    </div>
+
+    <div class="container-fluid padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h3>Register</h3>
+            </div>
+            <hr>
+        </div>
+        <form action="home.html">
+            <div class="form-group">
+                <label for="username-field-2">Username</label>
+                <input id="username-field-2" type="text" class="form-control" required placeholder="Username">
+            </div>
+            <div class="form-group">
+                <label for="email-field">Email</label>
+                <input type="email" class="form-control" id="email-field" required placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="password-field-2">Password</label>
+                <input id="password-field-2" type="password" class="form-control" required placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password-field">Confirm Password</label>
+                <input id="confirm-password-field" type="password" class="form-control" required placeholder="Confirm Password">
+            </div>
+            <button type="submit" class="btn btn-outline-secondary">Register</button>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="../script/util.js"></script>
+</body>
+</html>

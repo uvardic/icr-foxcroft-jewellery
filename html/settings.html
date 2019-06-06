@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="../style/style.css" rel="stylesheet">
+    <link href="../style/autocomplete.css" rel="stylesheet">
+    <link href="../style/panel.css" rel="stylesheet">
+    <link rel="icon" href="../img/favicon.ico">
+    <title>Foxcroft</title>
+</head>
+<body>
+    <div include-html="navigation.html"></div>
+
+    <div class="container-fluid padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h3>Change Account Info</h3>
+            </div>
+            <hr>
+        </div>
+        <form action="home.html">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="username-field">Username</label>
+                    <input type="text" class="form-control" id="username-field" placeholder="Username">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="first-name">First name</label>
+                    <input type="text" class="form-control" id="first-name" placeholder="First name">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="last-name">Last name</label>
+                    <input type="text" class="form-control" id="last-name" placeholder="Last name">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="country-field">Country</label>
+                    <input type="text" class="form-control" id="country-field" placeholder="Country">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="region-field">Region</label>
+                    <input type="text" class="form-control" id="region-field" placeholder="Region">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="city-field">City / Street / House number</label>
+                <input type="text" class="form-control" id="city-field" placeholder="City / Street / House number">
+            </div>
+            <div class="form-group">
+                <label for="email-field">Email</label>
+                <input type="email" class="form-control" id="email-field" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="phone-number">Phone number</label>
+                <input type="text" class="form-control" id="phone-number" placeholder="Phone Number">
+            </div>
+            <div class="form-group">
+                <label for="password-field-1">Password</label>
+                <input id="password-field-1" type="password" class="form-control" required placeholder="Password">
+                <small>This field is used for validation. To change your password go to the Change Password section</small>
+            </div>
+            <button type="submit" class="btn btn-outline-secondary">Save Info</button>
+            <small>Empty fields will not be changed</small>
+        </form>
+    </div>
+
+    <div class="container-fluid padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h3>Change Password</h3>
+            </div>
+            <hr>
+        </div>
+        <form action="home.html">
+            <div class="form-group">
+                <label for="password-field-2">New Password</label>
+                <input id="password-field-2" type="password" class="form-control" required placeholder="New Password">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password-field-1">Confirm Password</label>
+                <input id="confirm-password-field-1" type="password" class="form-control" required placeholder="Confirm Password">
+            </div>
+            <div class="form-group">
+                <label for="old-password-field">Old Password</label>
+                <input id="old-password-field" type="password" class="form-control" required placeholder="Old Password">
+            </div>
+
+            <button type="submit" class="btn btn-outline-secondary">Change Password</button>
+        </form>
+    </div>
+
+    <div class="container-fluid padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h3>Delete Account</h3>
+            </div>
+            <hr>
+        </div>
+        <form action="home.html">
+            <div class="form-group">
+                <label for="password-field">Password</label>
+                <input id="password-field" type="password" class="form-control" required placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password-field">Confirm Password</label>
+                <input id="confirm-password-field" type="password" class="form-control" required placeholder="Confirm Password">
+            </div>
+            <button type="submit" class="btn btn-outline-secondary">Delete</button>
+            <small>WARNING! Account will be deleted permanently</small>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="../script/util.js"></script>
+</body>
+</html>

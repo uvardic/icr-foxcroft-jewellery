@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="../style/style.css" rel="stylesheet">
+    <link href="../style/autocomplete.css" rel="stylesheet">
+    <link href="../style/panel.css" rel="stylesheet">
+    <link rel="icon" href="../img/favicon.ico">
+    <title>Foxcroft</title>
+</head>
+<body>
+    <div include-html="navigation.html"></div>
+
+    <script src="../script/shop.js"></script>
+
+    <div class="input-group mb-3">
+        <input id="search" name="search" type="text" class="form-control autocomplete" placeholder="Search"
+               aria-label="Search" aria-describedby="basic-addon1" oninput="inputEvent('RING')">
+    </div>
+
+    <script>
+        initializeProducts(20);
+    </script>
+
+    <div id="products" name="products" class="container-fluid padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h1 id="products-header" name="products-header" class="display-5">Rings</h1>
+            </div>
+            <hr>
+        </div>
+        <div id="product-container" name="product-container" class="row padding">
+            <script>
+                createRingElements();
+            </script>
+        </div>
+    </div>
+
+    <div include-html="footer.html"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="../script/util.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+.remove-button {
+    padding: 0;
+    border: none;
+    background: none;
+    color: #333;
+}
+
+table {
+    font-size: 18px;
+    border-collapse: collapse;
+    width: 100%;
+    color: #333;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f1f1f1;
+    color: #000;
+    font-weight: normal;
+}
+
+div.inline {
+    float: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.wrapper {
+    margin-top: 10px;
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    table {
+        font-size: 12px;
+    }
+}
